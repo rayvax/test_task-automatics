@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import { Graph } from './lib/antv-x6';
 import AddFromJson from './lib/antv-x6/AddFromJson';
+import './components/custom-nodes';
 
 function App() {
   const importGraphData = useCallback(() => import('./data/nodes.json'), []);

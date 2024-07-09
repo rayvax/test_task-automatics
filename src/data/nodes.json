@@ -2,12 +2,15 @@
   "nodes": [
     {
       "id": "node1",
-      "shape": "rect",
+      "shape": "installation",
       "x": 100,
       "y": 200,
-      "width": 80,
+      "width": 100,
       "height": 40,
-      "label": "hello"
+      "label": "hello",
+      "data": {
+        "progress": 20
+      }
     },
     {
       "id": "node2",
