@@ -1,0 +1,41 @@
+.current {
+  box-sizing: border-box;
+
+  width: 165px;
+  height: 52px;
+
+  padding: 4px 8px;
+
+  background: #1C1F2B;
+  border: 1px solid #606580;
+  border-radius: 2px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.current__name {
+  text-align: center;
+
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.current__valuesContainer {
+  font-size: 16px;
+  line-height: 18px;
+
+  height: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  color: #606580;
+}
+
+.current__accentText {
+  color: #F7931E;
+}

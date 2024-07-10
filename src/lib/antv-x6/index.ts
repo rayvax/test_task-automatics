@@ -1,2 +1,3 @@
-export * from './Graph';
-export * from './hooks';
+export { Graph, useGraphInstance } from './Graph';
+export { useGraphState } from './hooks';
+export { graphGlobalConfig } from './global-config';

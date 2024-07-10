@@ -1,26 +1,81 @@
 {
   "nodes": [
     {
-      "id": "node1",
+      "id": "installation-1",
       "shape": "installation",
       "x": 100,
       "y": 200,
-      "width": 100,
-      "height": 40,
-      "label": "hello",
       "data": {
-        "progress": 20
+        "name": "Установка 1"
       }
     },
     {
-      "id": "node2",
-      "shape": "ellipse",
-      "x": 300,
-      "y": 200,
-      "width": 80,
-      "height": 40,
-      "label": "world"
+      "id": "installation-2",
+      "shape": "installation",
+      "x": 100,
+      "y": 350,
+      "data": {
+        "name": "Установка 2"
+      }
+    },
+    {
+      "id": "installation-3",
+      "shape": "installation",
+      "x": 100,
+      "y": 500,
+      "data": {
+        "name": "Установка 3"
+      }
+    },
+    {
+      "id": "current-1",
+      "shape": "current",
+      "x": 400,
+      "y": 190,
+      "data": {
+        "name": "Поток 1",
+        "delta": 30,
+        "progress": 40,
+        "liquidAmount": 20
+      }
+    },
+    {
+      "id": "current-2",
+      "shape": "current",
+      "x": 400,
+      "y": 340,
+      "data": {
+        "name": "Поток 2",
+        "delta": 13,
+        "progress": 55,
+        "liquidAmount": 58
+      }
+    },
+    {
+      "id": "current-3",
+      "shape": "current",
+      "x": 400,
+      "y": 490,
+      "data": {
+        "name": "Поток 3",
+        "delta": 22,
+        "progress": 46,
+        "liquidAmount": 12
+      }
     }
   ],
-  "edges": [{ "source": "node1", "target": "node2" }]
+  "edges": [
+    {
+      "source": "installation-1",
+      "target": "current-1"
+    },
+    {
+      "source": "installation-2",
+      "target": "current-2"
+    },
+    {
+      "source": "installation-3",
+      "target": "current-3"
+    }
+  ]
 }
