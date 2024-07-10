@@ -1,0 +1,25 @@
+.installation {
+  box-sizing: border-box;
+  width: 120px;
+  height: 32px;
+  padding: 4px;
+
+  background: #303549;
+  border: 1px solid #8C99B2;
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.installation__iconContainer {
+  background: #1C1F2B;
+  border: 1px solid #8C99B2;
+  border-radius: 50%;
+  padding: 6px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
