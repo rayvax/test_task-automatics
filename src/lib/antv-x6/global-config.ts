@@ -1,6 +1,6 @@
 import { Shape } from '@antv/x6';
 
-export function graphGlobalConfig() {
+export function initGraphGlobalConfig() {
   Shape.Edge.config({
     attrs: {
       line: {
