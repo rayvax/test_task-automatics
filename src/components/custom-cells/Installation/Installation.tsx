@@ -4,17 +4,26 @@ import { register } from '@antv/x6-react-shape';
 import styles from './Installation.module.scss';
 import { Cpu } from 'react-feather';
 
-type InstallationNodeData = { name: string };
+import { openGlobalChartModal } from '../../../lib/global-modal';
+
+type InstallationNodeData = {
+  name: string;
+  char_data: number[][];
+};
 
 type InstallationProps = {
   node: Node;
 };
 
 export function Installation({ node }: InstallationProps) {
-  const { name } = node.getData<InstallationNodeData>();
+  const { name, char_data: chartData } = node.getData<InstallationNodeData>();
+
+  function handleInstallationClick() {
+    openGlobalChartModal(chartData);
+  }
 
   return (
-    <div className={styles.installation}>
+    <div className={styles.installation} onClick={handleInstallationClick}>
       <div className={styles.installation__iconContainer}>
         <Cpu size={12} />
       </div>
