@@ -6,6 +6,7 @@ import { FullscreenGraph, graphGlobalConfig } from './lib/antv-x6';
 import AddFromJson from './lib/antv-x6/AddFromJson';
 import { registerAppNodes } from './components/custom-nodes';
 import { GlobalChartModal } from './lib/global-modal';
+import { Header } from './components/Header';
 
 registerAppNodes();
 graphGlobalConfig();
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <FullscreenGraph
         autoResize
         panning

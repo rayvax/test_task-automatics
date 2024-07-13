@@ -1,0 +1,106 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 60px;
+  padding: 0 40px;
+  background: #272A38;
+
+  z-index: 10;
+  display: flex;
+}
+
+.header__logoContainer {
+  width: fit-content;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  border-left: 1px solid #4B5169;
+  border-right: 1px solid #4B5169;
+  box-shadow: 10px 0 20px -2px rgba(0, 0, 0, 0.5);
+  padding: 0 10px;
+}
+
+.header__logoIconContainer {
+  box-sizing: border-box;
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  border: 3px solid #3FA9F5;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.header__logoIconContainer svg,
+.header__accountIconContainer svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__logoIconContainer svg {
+  width: 26px;
+  height: 26px;
+}
+
+.header__moreButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 10px;
+}
+
+.header__moreButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header__accountContainer {
+
+  width: fit-content;
+  height: 100%;
+
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  color: #4B5169;
+
+  border-left: 1px solid #4B5169;
+  border-right: 1px solid #4B5169;
+  box-shadow: -10px 0 20px -2px rgba(0, 0, 0, 0.5);
+  padding: 0 10px;
+}
+
+.header__accountIconContainer {
+  box-sizing: border-box;
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid #4B5169;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.header__accountIconContainer svg {
+  width: 24px;
+  height: 24px;
+}
