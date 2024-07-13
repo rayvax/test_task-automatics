@@ -20,7 +20,7 @@ function App() {
       <FullscreenGraph
         autoResize
         panning
-        connecting={{ snap: true, router: 'manhattan' }}
+        connecting={{ snap: true, router: 'er' }}
         mousewheel
         width={800}
         height={700}

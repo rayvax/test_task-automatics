@@ -176,15 +176,18 @@
   "edges": [
     {
       "source": "installation-1",
-      "target": "current-1"
+      "target": "current-1",
+      "shape": "line-edge"
     },
     {
       "source": "installation-2",
-      "target": "current-2"
+      "target": "current-2",
+      "shape": "line-edge"
     },
     {
       "source": "installation-3",
-      "target": "current-3"
+      "target": "current-3",
+      "shape": "line-edge"
     },
     {
       "source": "current-1",
