@@ -1,18 +1,13 @@
 import { useState } from 'react';
 import { openGlobalChartModal } from '../../lib/global-modal';
-import { Graph, Node } from '@antv/x6';
+import { CustomNodeProps } from '../../types/custom-node';
 
 type ChartModalFunctionalityNodeData = {
   char_data: number[][];
 };
 
-export function withChartModalFunctionality(
-  Component: React.ComponentType<{
-    node: Node;
-    graph: Graph;
-  }>,
-) {
-  return (props: { node: Node; graph: Graph }) => {
+export function withChartModalFunctionality(Component: React.ComponentType<CustomNodeProps>) {
+  return (props: CustomNodeProps) => {
     const { char_data: chartData } = props.node.getData<ChartModalFunctionalityNodeData>();
 
     const [isMouseDown, setIsMouseDown] = useState(false);

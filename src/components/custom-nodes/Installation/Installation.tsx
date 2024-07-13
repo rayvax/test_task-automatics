@@ -5,17 +5,13 @@ import styles from './Installation.module.scss';
 import { Cpu } from 'react-feather';
 
 import { withChartModalFunctionality } from '../../../hoc/withChartModalFunctionality';
+import { CustomNodeProps } from '../../../types/custom-node';
 
 type InstallationNodeData = {
   name: string;
-  char_data: number[][];
 };
 
-type InstallationProps = {
-  node: Node;
-};
-
-export function Installation({ node }: InstallationProps) {
+export function Installation({ node }: CustomNodeProps) {
   const { name } = node.getData<InstallationNodeData>();
 
   return (

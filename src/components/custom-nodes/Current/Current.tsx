@@ -1,7 +1,7 @@
 import { register } from '@antv/x6-react-shape';
 import styles from './Current.module.scss';
-import { Node } from '@antv/x6';
 import { withChartModalFunctionality } from '../../../hoc/withChartModalFunctionality';
+import { CustomNodeProps } from '../../../types/custom-node';
 
 type CurrentNodeData = {
   name: string;
@@ -10,11 +10,7 @@ type CurrentNodeData = {
   liquidAmount: number;
 };
 
-type CurrentProps = {
-  node: Node;
-};
-
-export function Current({ node }: CurrentProps) {
+export function Current({ node }: CustomNodeProps) {
   const { name, delta, progress, liquidAmount } = node.getData<CurrentNodeData>();
 
   const deltaText = `${delta > 0 ? '+' : '-'}${Math.abs(delta)}`;

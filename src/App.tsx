@@ -4,7 +4,7 @@ import './styles/index.scss';
 import { useCallback } from 'react';
 import { FullscreenGraph, graphGlobalConfig } from './lib/antv-x6';
 import AddFromJson from './lib/antv-x6/AddFromJson';
-import { registerAppNodes } from './components/custom-cells';
+import { registerAppNodes } from './components/custom-nodes';
 import { GlobalChartModal } from './lib/global-modal';
 
 registerAppNodes();
