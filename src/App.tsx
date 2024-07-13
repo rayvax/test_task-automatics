@@ -17,7 +17,6 @@ function App() {
     <>
       <FullscreenGraph
         autoResize
-        grid
         panning
         connecting={{ snap: true }}
         mousewheel
