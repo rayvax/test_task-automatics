@@ -1,6 +1,7 @@
 import { register } from '@antv/x6-react-shape';
 import styles from './Current.module.scss';
 import { Node } from '@antv/x6';
+import { withChartModalFunctionality } from '../../../hoc/withChartModalFunctionality';
 
 type CurrentNodeData = {
   name: string;
@@ -43,5 +44,5 @@ Current.register = () =>
     width: 165,
     height: 52,
     effect: ['data'],
-    component: Current,
+    component: withChartModalFunctionality(Current),
   });

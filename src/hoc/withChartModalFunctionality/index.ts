@@ -1,0 +1,1 @@
+export { withChartModalFunctionality } from './withChartModalFunctionality';
