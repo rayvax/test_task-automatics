@@ -4,13 +4,13 @@ import type { ReactNode } from 'react';
 
 const GraphContext = createContext<GraphX6 | null>(null);
 
-interface GraphProps {
+export type GraphProps = GraphX6.Options & {
   className?: string;
   container?: HTMLDivElement;
   children?: ReactNode;
-}
+};
 
-export const Graph = forwardRef<GraphX6, GraphX6.Options & GraphProps>((props, ref) => {
+export const Graph = forwardRef<GraphX6, GraphProps>((props, ref) => {
   const [graph, setGraph] = useState<GraphX6 | null>(null);
   const { container, children, className = 'react-x6-graph', ...other } = props;
   const containerRef = useRef<HTMLDivElement>(container || null);

@@ -2,7 +2,7 @@ import '@fontsource/roboto';
 import './styles/index.scss';
 
 import { useCallback } from 'react';
-import { Graph, graphGlobalConfig } from './lib/antv-x6';
+import { FullscreenGraph, graphGlobalConfig } from './lib/antv-x6';
 import AddFromJson from './lib/antv-x6/AddFromJson';
 import { registerAppNodes } from './components/custom-cells';
 import { GlobalChartModal } from './lib/global-modal';
@@ -15,9 +15,17 @@ function App() {
 
   return (
     <>
-      <Graph autoResize connecting={{ snap: true }} mousewheel width={800} height={700}>
+      <FullscreenGraph
+        autoResize
+        grid
+        panning
+        connecting={{ snap: true }}
+        mousewheel
+        width={800}
+        height={700}
+      >
         <AddFromJson fetchGraphData={importGraphData} />
-      </Graph>
+      </FullscreenGraph>
       <GlobalChartModal />
     </>
   );
