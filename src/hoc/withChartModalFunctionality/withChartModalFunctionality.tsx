@@ -16,12 +16,11 @@ export function withChartModalFunctionality(Component: React.ComponentType<Custo
     function handleClick() {
       if (!chartData) return;
 
-      if (isDrag) {
-        resetDrag();
-        return;
+      if (!isDrag) {
+        openGlobalChartModal(chartData);
       }
 
-      openGlobalChartModal(chartData);
+      resetDrag();
     }
 
     function handleMouseDown() {

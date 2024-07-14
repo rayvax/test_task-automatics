@@ -4,6 +4,7 @@ import {
   GLOBAL_MODAL_CONTAINER_ID,
   MODAL_CHART_CONTAINER_CLASSNAME,
 } from './contants';
+import { modalOpenClassName } from '../../components/Modal/Modal';
 
 export function openGlobalChartModal(chartData: number[][]) {
   const globalElements = getGlobalChartModalElements();
@@ -16,7 +17,7 @@ export function openGlobalChartModal(chartData: number[][]) {
 
   chartContainer.insertAdjacentElement('beforeend', chartElement);
 
-  modal.style.display = 'flex';
+  modal.classList.add(modalOpenClassName);
 }
 
 export function closeGlobalChartModal() {
@@ -32,7 +33,7 @@ export function closeGlobalChartModal() {
 
   chart.dispose();
   chartElement.remove();
-  modal.style.display = 'none';
+  modal.classList.remove(modalOpenClassName);
 }
 
 function getGlobalChartModalElements() {
